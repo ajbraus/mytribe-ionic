@@ -7,6 +7,8 @@
 // 'mytribe.controllers' is found in controllers.js
 angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
 
+.constant('HOST', 'http://localhost:3000/api/v1') //DEV
+// .constant('HOST', 'https://www.coride.co/api/v1') //PRODUCTION
 
 .config(function($stateProvider, $urlRouterProvider) {
 
