@@ -6,3 +6,7 @@
   width: 96px;
   height: 96px;
 }
+.tabs-default {
+  display: block;
+  color: #0CAABB;
+}
