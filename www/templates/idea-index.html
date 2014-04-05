@@ -1,0 +1,19 @@
+<!-- 
+  This template gets placed in the Pet tab's <ion-nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'ideas' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<ion-view title="Ideas">
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item ng-repeat="idea in ideas" type="item-text-wrap" href="#/tab/idea/{{idea.id}}">
+        <h3>{{idea.title}}</h3>
+        <p>{{idea.description}}</p>
+      </ion-item>
+      
+    </ion-list>
+
+  </ion-content>
+</ion-view>
