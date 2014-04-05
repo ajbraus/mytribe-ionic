@@ -1,0 +1,16 @@
+Adam's
+
+  settings side-menu.html
+
+Chris
+
+  Styling the tab bar
+  nav bar
+
+Moke
+
+  event-detail.html
+
+
+
+node scrips/web-server.js
