@@ -3,7 +3,17 @@
   It was wired up in the app config (app.js) 
   The 'ideas' data comes from its $scope within PetIndexCtrl (controller.js)
 -->
-<ion-view title="Ideas">
+<ion-view title="{{tribe.name}}">
+  <ion-nav-buttons side="left">
+    <a class="button-clear button" href="#/side-menu">
+      <i class='icon ion-navicon'></i>
+    </a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button-clear button" href="#/ideas/new">
+      <i class='icon ion-plus'></i>
+    </a>
+  </ion-nav-buttons>
   <ion-content>
 
     <ion-list>

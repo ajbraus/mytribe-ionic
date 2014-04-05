@@ -2,8 +2,8 @@ angular.module('mytribe.controllers', [])
 
 
 // A simple controller that fetches a list of data from a service
-.controller('IdeaIndexCtrl', function($scope, IdeaService) {
-  // "Pets" is a service returning mock data (services.js)
+.controller('IdeaIndexCtrl', function($scope, $ionicSideMenuDelegate, IdeaService, TribeService) {
+  $scope.tribe = TribeService.get(0);
   $scope.ideas = IdeaService.all();
 })
 
