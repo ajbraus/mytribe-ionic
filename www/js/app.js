@@ -5,10 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'mytribe.services' is found in services.js
 // 'mytribe.controllers' is found in controllers.js
-angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
+angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.controllers'])
 
 .constant('HOST', 'http://localhost:3000/api/v1') //DEV
-// .constant('HOST', 'https://www.coride.co/api/v1') //PRODUCTION
+// .constant('HOST', 'https://www.mytri.be/api/v1') //PRODUCTION
 
 .config(function($stateProvider, $urlRouterProvider) {
 
