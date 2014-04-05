@@ -4,9 +4,30 @@
   The PetCtrl pulls data from the Pets service (service.js)
   The Pets service returns an array of idea data
 -->
-<ion-view title="{{idea.title}}">
+<ion-view title="{{idea.title}}" has-tabs="true">
+  <ion-nav-buttons side="left">
+    <a class="button-clear button" href="#/tab/ideas">
+      <i class='icon ion-ios7-arrow-back'></i>
+    </a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <div class="button-clear button" ng-click="followIdea()">
+      <i class='icon ion-person-stalker'></i>
+    </div>
+    <div class="button-clear button" ng-click="followIdea()">
+      <i class='icon ion-arrow-up-b'></i>
+    </div>
+  </ion-nav-buttons>
   <ion-content padding="true">
-    <p>{{ idea.description }}</p>
-    <p><a class="button button-small icon ion-arrow-left-b" href="#/tab/ideas"> All Pets</a></p>
+    <ol class="messages">
+      <li ng-repeat="message in messages" ng-bind-html="message.content"></li>
+    </ol>
   </ion-content>
+  <div class="bar bar-footer item-input-inset footer-input">
+    <label class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" placeholder="Search">
+    </label>
+    <button class="button button-clear" ng-click="add()">Send</button>
+  </div>
 </ion-view>

@@ -7,10 +7,29 @@
 <ion-view title="Menu">
   <ion-nav-buttons side="right">
     <a class="button-clear button" href="#/tabs">
-      <i class='icon ion-plus'></i>
+      <i class='icon ion-navicon'></i>
     </a>
   </ion-nav-buttons>
-  <ion-content padding="true">
-    Menu
+  <ion-content padding="false">
+    <ion-list>
+      <ion-item class="item item-thumbnail-left item-avatar" type="item-text-wrap">
+        <img src="{{current_user.pic_url}}">
+        <h3>{{current_user.name}}</h3>
+        <p>{{current_user.interests}}</p>
+      </ion-item>
+      <div class='item item-divider'>Tribes</div>
+      <ion-item ng-repeat="tribe in tribes" class="item item-thumbnail-left" type="item-text-wrap" href="#/tabs">
+        <img src="{{tribe.pic_url}}">
+        <h3>{{tribe.name}}</h3>
+        <p>{{tribe.members_count}} Members</p>
+      </ion-item>
+      <div class='item item-divider'>Etc</div>
+      <ion-item class="item " type="item-text-wrap" href="#/settings">
+        Settings
+      </ion-item>
+      <ion-item class="item " type="item-text-wrap" href="#/login">
+        Logout
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
