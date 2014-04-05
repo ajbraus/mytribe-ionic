@@ -49,6 +49,12 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
       }
     })
 
+    .state('event-detail', {
+      url: '/events/:eventId',
+      templateUrl: 'templates/event-detail.html',
+      controller: 'EventDetailCtrl'
+    })
+
     .state('tab.members', {
       url: '/members',
       views: {
@@ -57,6 +63,12 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
           controller: 'MemberIndexCtrl'
         }
       }
+    })
+
+    .state('member-detail', {
+      url: '/members/:memberId',
+      templateUrl: 'templates/member-detail.html',
+      controller: 'MemberDetailCtrl'
     })
 
     .state('side-menu', {
