@@ -15,7 +15,7 @@
     <ion-list>
 
       <ion-item ng-repeat="member in members" class="item item-thumbnail-left item-avatar" type="item-text-wrap" href="#/tab/members/{{member.id}}">
-        <img src="http://justinjackson.ca/wp-content/uploads/2008/08/justin-jackson-black-and-white-canada-profile.jpg">
+        <img src= {{member.pic_url}}>
         <h3>{{member.name}}</h3>
         <p>{{member.interests}}</p>
       </ion-item>
