@@ -1,0 +1,22 @@
+<!-- 
+  This template gets placed in the Pet tab's <ion-nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'ideas' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<ion-view title="Login" hide-nav-bar="true">
+  <div class="bg-image login-img"></div>
+  <ion-content>
+    <form ng-submit="submit()" class="login-form">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" ng-model="user.email" placeholder="Email" required>
+        </label>
+        <label class="item item-input">
+          <input type="password" ng-model="user.password" placeholder="Password" required></input>
+        </label>
+        <button class="button button-block button-assertive" type="submit">Let it Begin</button>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

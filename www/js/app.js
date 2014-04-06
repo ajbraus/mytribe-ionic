@@ -18,6 +18,13 @@ angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.c
   // Each state's controller can be found in controllers.js
   $stateProvider
     // setup an abstract state for the tabs directive
+
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
+
     .state('tab', {
       url: "/tab",
       abstract: true,

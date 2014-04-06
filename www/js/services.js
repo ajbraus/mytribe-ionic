@@ -45,9 +45,9 @@ angular.module('mytribe.services', [])
 
 .factory('EventService', function() {
   var events = [
-    { id: 0, title: 'Open House', description: 'Furry little creatures. Obsessed with plotting assassination, but never following through on it.' },
-    { id: 1, title: 'Brainstorm', description: 'Lovable. Loyal almost to a fault. Smarter than they let on.' },
-    { id: 2, title: 'Fun time!', description: 'An advanced pet. Needs millions of gallons of salt water. Will happily eat you.' }
+    { id: 0, title: 'Open House', starts_at: '9:00 AM - 10:00 AM', location: 'MGE Innovation Center', description: 'talk & meet new people' },
+    { id: 1, title: 'Brainstorm', starts_at: '11:00 AM - 1:30 PM', location: 'MGE Innovation Center', description: 'time to let ideas to fly!'},
+    { id: 2, title: 'Fun time!', starts_at: '2:00 PM - 4:00 PM', location: 'MGE Innovation Center', description: ' enjoy recreational activities' }
   ];
 
   return {

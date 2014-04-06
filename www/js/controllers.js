@@ -1,5 +1,11 @@
 angular.module('mytribe.controllers', [])
 
+.controller('LoginCtrl', function($scope, $location, EventService) {
+  $scope.submit = function() {
+    $location.url("/tab/ideas");
+  };
+})
+
 // A simple controller that fetches a list of data from a service
 .controller('IdeaIndexCtrl', function($scope, IdeaService, TribeService) {
   $scope.tribe = TribeService.get(0);
@@ -74,27 +80,22 @@ angular.module('mytribe.controllers', [])
 })
 
 .controller('EventIndexCtrl', function($scope, EventService) {
-  // "Pets" is a service returning mock data (services.js)
   $scope.events = EventService.all();
 })
 
 .controller('EventDetailCtrl', function($scope, EventService) {
-  // "Pets" is a service returning mock data (services.js)
   $scope.events = EventService.all();
 })
 
 .controller('MemberIndexCtrl', function($scope, MemberService) {
-  // "Pets" is a service returning mock data (services.js)
   $scope.members = MemberService.all();
 })
 
 .controller('MemberDetailCtrl', function($scope, MemberService) {
-  // "Pets" is a service returning mock data (services.js)
   $scope.members = MemberService.all();
 })
 
 .controller('SideMenuCtrl', function($scope, TribeService, MemberService) {
-  // "Pets" is a service returning mock data (services.js)
   $scope.tribes = TribeService.all();
   $scope.current_user = MemberService.get(0)
 });

@@ -68,3 +68,23 @@ body {
   position: absolute;
   bottom: 0;
 }
+
+.login-form {
+  position: relative;
+  top: 250px;
+}
+
+.login-form .list {
+  background-color: transparent;
+}
+
+.bg-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.login-img {
+  background-image: url("../img/login_bg.jpg"); 
+}
