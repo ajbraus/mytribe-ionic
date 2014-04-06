@@ -18,7 +18,7 @@
       <i class='icon ion-arrow-up-b'></i>
     </div> -->
   </ion-nav-buttons>
-  <ion-content padding="true">
+  <ion-content padding="true" tabs="true">
     <ol class="messages">
       <li ng-repeat="message in messages" ng-bind-html="message.content"></li>
     </ol>
@@ -44,11 +44,11 @@
     <ion-content>
       <ion-list>
 
-        <ion-item ng-repeat="member in members" class="item item-thumbnail-left item-avatar" type="item-text-wrap" href="#/tab/members/{{member.id}}">
+        <a ng-repeat="member in members" class="item item-thumbnail-left item-avatar" type="item-text-wrap" href="#/members/{{member.id}}">
           <img src="{{member.pic_url}}">
           <h3>{{member.name}}</h3>
           <p>{{member.interests}}</p>
-        </ion-item>
+        </a>
         
       </ion-list>
 
