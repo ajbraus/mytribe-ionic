@@ -7,8 +7,8 @@
 // 'mytribe.controllers' is found in controllers.js
 angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.controllers'])
 
-.constant('HOST', 'http://localhost:3000/api/v1') //DEV
-// .constant('HOST', 'https://www.mytri.be/api/v1') //PRODUCTION
+.constant('HOST', 'http://localhost:1337') //DEV
+// .constant('HOST', 'https://www.mytri.be') //PRODUCTION
 
 .config(function($stateProvider, $urlRouterProvider) {
 

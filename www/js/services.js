@@ -16,7 +16,7 @@ angular.module('mytribe.services', [])
   ];
 
   return {
-    all: function() {
+    query: function() {
       return ideas;
     },
     get: function(ideaId) {
@@ -33,7 +33,7 @@ angular.module('mytribe.services', [])
   ];
 
   return {
-    all: function() {
+    query: function() {
       return tribes;
     },
     get: function(tribeId) {
@@ -51,7 +51,7 @@ angular.module('mytribe.services', [])
   ];
 
   return {
-    all: function() {
+    query: function() {
       return events;
     },
     get: function(eventId) {
@@ -77,7 +77,7 @@ angular.module('mytribe.services', [])
   ];
 
   return {
-    all: function() {
+    query: function() {
       return members;
     },
     get: function(ideaId) {
