@@ -33,14 +33,10 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
       }
     })
 
-    .state('tab.idea-detail', {
-      url: '/idea/:ideaId',
-      views: {
-        'ideas-tab': {
-          templateUrl: 'templates/idea-detail.html',
-          controller: 'IdeaDetailCtrl'
-        }
-      }
+    .state('idea-detail', {
+      url: '/ideas/:ideaId',
+      templateUrl: 'templates/idea-detail.html',
+      controller: 'IdeaDetailCtrl'
     })
 
     .state('tab.events', {
@@ -53,6 +49,12 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
       }
     })
 
+    .state('event-detail', {
+      url: '/events/:eventId',
+      templateUrl: 'templates/event-detail.html',
+      controller: 'EventDetailCtrl'
+    })
+
     .state('tab.members', {
       url: '/members',
       views: {
@@ -63,9 +65,16 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
       }
     })
 
+    .state('member-detail', {
+      url: '/members/:memberId',
+      templateUrl: 'templates/member-detail.html',
+      controller: 'MemberDetailCtrl'
+    })
+
     .state('side-menu', {
       url: '/side-menu',
-      templateUrl: 'templates/side-menu.html'
+      templateUrl: 'templates/side-menu.html',
+      controller: 'SideMenuCtrl'
     });
 
   // if none of the above states are matched, use this as the fallback

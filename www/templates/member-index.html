@@ -4,11 +4,17 @@
   The 'members' data comes from its $scope within PetIndexCtrl (controller.js)
 -->
 <ion-view title="Members">
+  <ion-nav-buttons side="left">
+    <a class="button-clear button" href="#/side-menu">
+      <i class='icon ion-navicon'></i>
+    </a>
+  </ion-nav-buttons>
+  
   <ion-content>
 
     <ion-list>
 
-      <ion-item ng-repeat="member in members" class="item item-thumbnail-left item-avatar" type="item-text-wrap" href="#/tab/member/{{member.id}}">
+      <ion-item ng-repeat="member in members" class="item item-thumbnail-left item-avatar" type="item-text-wrap" href="#/tab/members/{{member.id}}">
         <img src="http://justinjackson.ca/wp-content/uploads/2008/08/justin-jackson-black-and-white-canada-profile.jpg">
         <h3>{{member.name}}</h3>
         <p>{{member.interests}}</p>
