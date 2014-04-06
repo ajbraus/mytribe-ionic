@@ -5,20 +5,39 @@
   The Pets service returns an array of member data
 -->
 <ion-view title="{{member.name}}">
+  <ion-nav-buttons side="left">
+    <a class="button-clear button" href="#/tab/members">
+      <i class='icon ion-ios7-arrow-back'></i>
+    </a>
+  </ion-nav-buttons>
+
   <ion-content padding="true">
     <div class="list card">
       <div class="item item-thumbnail-left item-avatar">
         <img src="{{member.pic_url}}">
         <h3>{{member.name}}</h3>
         <p>
-          {{member.interests}}<br>
+          <i class="icon ion-email"></i> {{member.email}}<br>
+          <i class="icon ion-social-twitter"></i> {{member.handle}}<br>
+          <i class="icon ion-social-facebook"></i> /JoeJames <br>
+          <i class="icon ion-earth"></i> {{member.url}}<br>
+          <i class="icon ion-ios7-telephone"></i> {{member.phone_number}}<br>
         </p>
       </div>
-      <div class="item" ng-repeat="idea in ideas">
+      <div class="item">
+        <h4>Skills/Interests</h4>
+        <p>{{member.interests}}</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item">
+        <h4>In {{ideas.length}} Ideas</h4>
+      </div>
+      <div class="item item-avatar" ng-repeat="idea in ideas">
         <img src="http://justinjackson.ca/wp-content/uploads/2008/08/justin-jackson-black-and-white-canada-profile.jpg">
         <h3>{{idea.title}}</h3>
         <p>{{idea.description}}</p>
       </div>
-    </div>
+  </div>
   </ion-content>
 </ion-view>
