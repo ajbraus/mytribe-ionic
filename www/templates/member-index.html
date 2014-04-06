@@ -11,6 +11,12 @@
   </ion-nav-buttons>
   
   <ion-content>
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
 
     <ion-list>
       <ion-item ng-repeat="member in members" class="item item-thumbnail-left item-avatar" type="item-text-wrap" href="#/members/{{member.id}}">

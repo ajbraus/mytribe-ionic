@@ -34,7 +34,7 @@
         <h4>In {{ideas.length}} Ideas</h4>
       </div>
       <div class="item item-avatar" ng-repeat="idea in ideas">
-        <img src="http://justinjackson.ca/wp-content/uploads/2008/08/justin-jackson-black-and-white-canada-profile.jpg">
+        <img src="{{idea.user_pic_url}}">
         <h3>{{idea.title}}</h3>
         <p>{{idea.description}}</p>
       </div>

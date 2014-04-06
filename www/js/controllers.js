@@ -91,8 +91,8 @@ angular.module('mytribe.controllers', [])
   $scope.members = MemberService.query();
 })
 
-.controller('MemberDetailCtrl', function($scope, MemberService, IdeaService) {
-  $scope.member = MemberService.get(0);
+.controller('MemberDetailCtrl', function($scope, $stateParams, MemberService, IdeaService) {
+  $scope.member = MemberService.get($stateParams.memberId);
   $scope.ideas = IdeaService.query();
 })
 
