@@ -1,10 +1,5 @@
 angular.module('mytribe.controllers', [])
 
-//TO CONNECT TO SERVER
-// .factory('Idea', function ($resource, HOST) {
-//   return $resource(HOST + '/ideas/:id', { id: '@id' })
-// })
-
 // A simple controller that fetches a list of data from a service
 .controller('IdeaIndexCtrl', function($scope, $ionicSideMenuDelegate, IdeaService, TribeService) {
   $scope.tribe = TribeService.get(0);

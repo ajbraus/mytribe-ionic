@@ -1,5 +1,11 @@
 angular.module('mytribe.services', [])
 
+//TO CONNECT TO SERVER
+// .factory('Idea', function ($resource, HOST) {
+//   return $resource(HOST + '/ideas/:id', { id: '@id' })
+// })
+
+
 .factory('IdeaService', function() {
   var ideas = [
     { id: 0, title: 'Facebook for Pandas', description: 'Kuz Panda\'s got relationships too' },
