@@ -35,6 +35,16 @@ angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.c
       }
     })
 
+    .state('tab.idea-new', {
+      url: '/ideas/new',
+      views: {
+        'ideas-tab': {
+          templateUrl: 'templates/idea-new.html',
+          controller: 'NewIdeaCtrl'
+        }
+      }
+    })
+
     .state('idea-detail', {
       url: '/ideas/:ideaId',
       templateUrl: 'templates/idea-detail.html',

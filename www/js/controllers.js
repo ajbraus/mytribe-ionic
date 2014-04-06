@@ -1,14 +1,50 @@
 angular.module('mytribe.controllers', [])
 
 // A simple controller that fetches a list of data from a service
-.controller('IdeaIndexCtrl', function($scope, $ionicSideMenuDelegate, IdeaService, TribeService) {
+.controller('IdeaIndexCtrl', function($scope, IdeaService, TribeService) {
   $scope.tribe = TribeService.get(0);
   $scope.ideas = IdeaService.all();
 })
 
+.controller('NewIdeaCtrl', function($scope, $location, IdeaService, TribeService) {
+
+  $scope.idea = {}
+
+  $scope.submit = function() {
+    $location.url("/ideas/0");
+    // alert("Awesome! I like your idea, entitled: " + $scope.idea.title )
+    // Idea.save({}, $scope.idea, function (data) {
+    //   $location.path('/ideas/' + data.id);
+    // }, function() {
+    //   alert('Fail');
+    // });
+  };
+})
+
 // A simple controller that shows a tapped item's data
-.controller('IdeaDetailCtrl', function($scope, $stateParams, IdeaService, $ionicScrollDelegate) {
-  // "Pets" is a service returning mock data (services.js)
+.controller('IdeaDetailCtrl', function($scope, $stateParams, $ionicModal, IdeaService, MemberService, $ionicScrollDelegate) {
+  
+  $scope.members = MemberService.all();
+
+  $ionicModal.fromTemplateUrl('my-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
   $scope.idea = IdeaService.get($stateParams.ideaId);
 
   var messageOptions = [

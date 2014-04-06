@@ -1,0 +1,25 @@
+<!-- 
+  This template gets placed in the Pet tab's <ion-nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'ideas' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<ion-view title="New Idea">
+<!--   <ion-nav-buttons side="right">
+    <div class="button-clear button" ng-click="submit()">
+      Submit
+    </div>
+  </ion-nav-buttons> -->
+  <ion-content>
+  <form ng-submit="submit()">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="idea.title" placeholder="Title" required>
+      </label>
+      <label class="item item-input">
+        <textarea ng-model="idea.description" placeholder="Description" required></textarea>
+      </label>
+      <button class="button button-block button-light"type="submit">Start Idea!</button>
+    </div>
+  </form>
+  </ion-content>
+</ion-view>
