@@ -2,10 +2,25 @@
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
-.tabs-default {
+.tabs-tribe {
   display: block;
   color: #0CAABB;
 }
+
+.tabs{
+ background-color:  #FDFDFD;
+}
+
+.tab-item.tab-item-active {
+  opacity: 1;
+  color:  #0CAABB;
+}
+
+.bar.bar-positive{
+  background-color: #FDFDFD;
+  color:  black;
+}
+
 .messages {
   margin:0;
   padding:0;
