@@ -91,8 +91,9 @@ angular.module('mytribe.controllers', [])
   $scope.members = MemberService.all();
 })
 
-.controller('MemberDetailCtrl', function($scope, MemberService) {
-  $scope.members = MemberService.all();
+.controller('MemberDetailCtrl', function($scope, MemberService, IdeaService) {
+  $scope.member = MemberService.get(0);
+  $scope.ideas = IdeaService.all();
 })
 
 .controller('SideMenuCtrl', function($scope, TribeService, MemberService) {

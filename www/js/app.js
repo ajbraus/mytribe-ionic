@@ -20,7 +20,7 @@ angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.c
     // setup an abstract state for the tabs directive
 
     .state('login', {
-      url: '/login',
+      url: '/',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
     })
