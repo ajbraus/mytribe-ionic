@@ -5,8 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'mytribe.services' is found in services.js
 // 'mytribe.controllers' is found in controllers.js
-angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
+angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.controllers'])
 
+.constant('HOST', 'http://localhost:3000/api/v1') //DEV
+// .constant('HOST', 'https://www.mytri.be/api/v1') //PRODUCTION
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -49,6 +51,12 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
       }
     })
 
+    .state('event-detail', {
+      url: '/events/:eventId',
+      templateUrl: 'templates/event-detail.html',
+      controller: 'EventDetailCtrl'
+    })
+
     .state('tab.members', {
       url: '/members',
       views: {
@@ -57,6 +65,12 @@ angular.module('mytribe', ['ionic', 'mytribe.services', 'mytribe.controllers'])
           controller: 'MemberIndexCtrl'
         }
       }
+    })
+
+    .state('member-detail', {
+      url: '/members/:memberId',
+      templateUrl: 'templates/member-detail.html',
+      controller: 'MemberDetailCtrl'
     })
 
     .state('side-menu', {

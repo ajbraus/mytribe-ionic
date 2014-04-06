@@ -1,6 +1,5 @@
 angular.module('mytribe.controllers', [])
 
-
 // A simple controller that fetches a list of data from a service
 .controller('IdeaIndexCtrl', function($scope, $ionicSideMenuDelegate, IdeaService, TribeService) {
   $scope.tribe = TribeService.get(0);
@@ -43,7 +42,17 @@ angular.module('mytribe.controllers', [])
   $scope.events = EventService.all();
 })
 
+.controller('EventDetailCtrl', function($scope, EventService) {
+  // "Pets" is a service returning mock data (services.js)
+  $scope.events = EventService.all();
+})
+
 .controller('MemberIndexCtrl', function($scope, MemberService) {
+  // "Pets" is a service returning mock data (services.js)
+  $scope.members = MemberService.all();
+})
+
+.controller('MemberDetailCtrl', function($scope, MemberService) {
   // "Pets" is a service returning mock data (services.js)
   $scope.members = MemberService.all();
 })
