@@ -50,9 +50,9 @@ angular.module('mytribe.services', [])
 
 .factory('EventService', function() {
   var events = [
-    { id: 0, user_pic_url: "", pic_url: "http://www.buscaprat.com/administrador/upload/ofertas/AMIGOS%20FELICES.jpg", title: 'Open House', starts_at: '9:00 AM - 10:00 AM', location: 'MGE Innovation Center', description: 'talk & meet new people' },
-    { id: 1, user_pic_url: "", pic_url: "http://blog.futurice.com/wp-content/uploads/2014/04/IMG_6466.jpg", title: 'Brainstorm', starts_at: '11:00 AM - 1:30 PM', location: 'MGE Innovation Center', description: 'time to let ideas fly!' },
-    { id: 2, user_pic_url: "", pic_url: "http://www.pghlux.com/links/wp-content/uploads/2011/09/events-social.jpg", title: 'Fun time!', starts_at: '2:00 PM - 4:00 PM', location: 'MGE Innovation Center', description: 'enjoy recreational activities' }
+    { id: 0, rsvp_count:"20", user_name: "John Jospeh", user_pic_url: "http://www.agileguidance.com/wp-content/uploads/2013/04/PaulHeidema-Profile2013-Modified3-Square.png", pic_url: "http://www.buscaprat.com/administrador/upload/ofertas/AMIGOS%20FELICES.jpg", title: 'Open House', starts_at: 'Thur April 24, 6-8pm', location: 'MGE Innovation Center', description: 'Talk & Meet new people' },
+    { id: 1, rsvp_count:"4", user_name: "Anders Bellweather", user_pic_url: "http://www.alt-asset.com/wp-content/uploads/2011/01/Sam-Zakhem-Headshot-Square.jpg", pic_url: "http://blog.futurice.com/wp-content/uploads/2014/04/IMG_6466.jpg", title: 'Brainstorm', starts_at: 'Mon May 1, 6-8pm', location: 'MGE Innovation Center', description: 'Time to let ideas fly!' },
+    { id: 2, rsvp_count:"70", user_name: "Awesome Pants", user_pic_url: "http://physics.anu.edu.au/square_profile_image.php/342/400", pic_url: "http://www.pghlux.com/links/wp-content/uploads/2011/09/events-social.jpg", title: 'Fun time!', starts_at: 'Tues May 2, 3-5pm', location: 'MGE Innovation Center', description: 'Enjoy recreational activities' }
   ];
 
   return {

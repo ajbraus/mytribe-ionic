@@ -83,8 +83,8 @@ angular.module('mytribe.controllers', [])
   $scope.events = EventService.query();
 })
 
-.controller('EventDetailCtrl', function($scope, EventService) {
-  $scope.events = EventService.query();
+.controller('EventDetailCtrl', function($scope, $stateParams, EventService) {
+  $scope.event = EventService.get($stateParams.eventId);
 })
 
 .controller('MemberIndexCtrl', function($scope, MemberService) {

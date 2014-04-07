@@ -68,10 +68,14 @@ angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.c
       }
     })
 
-    .state('event-detail', {
+    .state('tab.event-detail', {
       url: '/events/:eventId',
-      templateUrl: 'templates/event-detail.html',
-      controller: 'EventDetailCtrl'
+      views: {
+        'events-tab': {
+          templateUrl: 'templates/event-detail.html',
+          controller: 'EventDetailCtrl'
+        }
+      }
     })
 
     .state('tab.members', {

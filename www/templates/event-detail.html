@@ -6,6 +6,28 @@
 -->
 <ion-view title="{{event.title}}">
   <ion-content padding="true">
-    <p>{{event.description}}</p>
+    <div class="list card">
+      <div class="item item-thumbnail-left item-text-wrap" href="#/events/{{event.id}}">
+        <img src="{{event.pic_url}}">
+        <h3>{{event.title}}</h3>
+        <p>
+          <i class="icon ion-ios7-location"></i> {{event.location}}<br>
+          {{event.starts_at}}
+        </p>
+      </div>
+      <div class="item">
+      	<h3>Description</h3>
+      	<p>{{event.description}}</p>
+      </div>
+      <div class="item text-right">
+      	<button class="button button-positive"><i class="icon ion-share"></i> Share</button>
+      	<button class="button button-assertive"><i class="icon ion-pricetag"></i> RSVP</button>
+      </div>
+      <a class="item item-avatar" href="#/members/0">
+        <img src="{{event.user_pic_url}}">
+        <h3>Host: {{event.user_name}}</h3>
+        <p><i class="icon ion-pricetags"></i> {{event.rsvp_count}} Rspvs</p>
+      </a>
+    </div>
   </ion-content>
 </ion-view>

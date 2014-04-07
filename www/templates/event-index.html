@@ -17,27 +17,19 @@
   <ion-content>
 
     <div class="list card" ng-repeat="event in events">
+      <a class="item item-thumbnail-left item-text-wrap" href="#tab/events/{{event.id}}">
+        <img src="{{event.pic_url}}">
+        <h3>{{event.title}}</h3>
+        <p>
+          <i class="icon ion-ios7-location"></i> {{event.location}}<br>
+          {{event.starts_at}}
+        </p>
+      </a>
       <div class="item item-avatar">
         <img src="{{event.user_pic_url}}">
-        <h3>Host: Joshua</h3>
+        <h3>Host: {{event.user_name}}</h3>
+        <p><i class="icon ion-pricetags"></i> {{event.rsvp_count}} Rspvs</p>
       </div>
-      <ion-item type="item item-body">
-      <img class="full-image" src="{{event.pic_url}}">
-        <h3>{{event.title}}</h3>
-        <p><i class="icon ion-ios7-location"></i> {{event.location}}<br>
-          {{event.starts_at}}</p>
-      </ion-item>
-      <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item" href="#">
-          <i class="icon ion-pricetag"></i>
-          RSVP
-        </a>
-        <a class="tab-item" href="#">
-          <i class="icon ion-share"></i>
-          Share
-        </a>
-      </div>
-
     </div>
 
   </ion-content>
