@@ -10,7 +10,7 @@
     </a>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <a class="button-clear button" href="#/tab/ideas/new">
+    <a class="button" href="#/tab/ideas/new">
       <i class='icon ion-plus'></i>
     </a>
   </ion-nav-buttons>
@@ -18,11 +18,11 @@
 
     <ion-list>
 
-      <ion-item ng-repeat="idea in ideas" class="item-avatar" type="item-text-wrap" href="#/ideas/{{idea.id}}">
-        <img src="http://justinjackson.ca/wp-content/uploads/2008/08/justin-jackson-black-and-white-canada-profile.jpg">
+      <a ng-repeat="idea in ideas" class="item item-avatar item-text-wrap" type="item-text-wrap" href="#/ideas/{{idea.id}}">
+        <img src="{{idea.user_pic_url}}">
         <h3>{{idea.title}}</h3>
         <p>{{idea.description}}</p>
-      </ion-item>
+      </a>
       
     </ion-list>
 

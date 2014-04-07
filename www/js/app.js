@@ -7,8 +7,8 @@
 // 'mytribe.controllers' is found in controllers.js
 angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.controllers'])
 
-.constant('HOST', 'http://localhost:3000/api/v1') //DEV
-// .constant('HOST', 'https://www.mytri.be/api/v1') //PRODUCTION
+.constant('HOST', 'http://localhost:1337') //DEV
+// .constant('HOST', 'https://www.mytri.be') //PRODUCTION
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -18,6 +18,13 @@ angular.module('mytribe', ['ionic', 'ngResource', 'mytribe.services', 'mytribe.c
   // Each state's controller can be found in controllers.js
   $stateProvider
     // setup an abstract state for the tabs directive
+
+    .state('login', {
+      url: '/',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
+
     .state('tab', {
       url: "/tab",
       abstract: true,
