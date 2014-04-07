@@ -45,9 +45,9 @@ angular.module('mytribe.services', [])
 
 .factory('EventService', function() {
   var events = [
-    { id: 0, title: 'Open House', starts_at: '9:00 AM - 10:00 AM', location: 'MGE Innovation Center', description: 'talk & meet new people' },
-    { id: 1, title: 'Brainstorm', starts_at: '11:00 AM - 1:30 PM', location: 'MGE Innovation Center', description: 'time to let ideas to fly!'},
-    { id: 2, title: 'Fun time!', starts_at: '2:00 PM - 4:00 PM', location: 'MGE Innovation Center', description: ' enjoy recreational activities' }
+    { id: 0, user_pic_url: "", pic_url: "http://www.buscaprat.com/administrador/upload/ofertas/AMIGOS%20FELICES.jpg", title: 'Open House', starts_at: '9:00 AM - 10:00 AM', location: 'MGE Innovation Center', description: 'talk & meet new people' },
+    { id: 1, user_pic_url: "", pic_url: "http://blog.futurice.com/wp-content/uploads/2014/04/IMG_6466.jpg", title: 'Brainstorm', starts_at: '11:00 AM - 1:30 PM', location: 'MGE Innovation Center', description: 'time to let ideas fly!' },
+    { id: 2, user_pic_url: "", pic_url: "http://www.pghlux.com/links/wp-content/uploads/2011/09/events-social.jpg", title: 'Fun time!', starts_at: '2:00 PM - 4:00 PM', location: 'MGE Innovation Center', description: 'enjoy recreational activities' }
   ];
 
   return {

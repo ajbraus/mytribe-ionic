@@ -16,16 +16,30 @@
   </ion-nav-buttons>
   <ion-content>
 
-    <ion-list>
-      <div class="card" ng-repeat="event in events">
-        <ion-item type="item item-text-wrap" href="#/tab/event/{{event.id}}">
-          <h3>{{event.title}}</h3>
-          <p>{{event.description}}</p>
-          <p>{{event.location}}</p>
-          <p>{{event.starts_at}}</p>
-        </ion-item>
+    <div class="list card" ng-repeat="event in events">
+      <div class="item item-avatar">
+        <img src="{{event.user_pic_url}}">
+        <h3>Host: Joshua</h3>
       </div>
-    </ion-list>
+      <ion-item type="item item-body">
+      <img class="full-image" src="{{event.pic_url}}">
+        <h3>{{event.title}}</h3>
+        <p><i class="icon ion-ios7-location"></i> {{event.location}}<br>
+          {{event.starts_at}}</p>
+      </ion-item>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-pricetag"></i>
+          RSVP
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+
+    </div>
 
   </ion-content>
 </ion-view>
+
